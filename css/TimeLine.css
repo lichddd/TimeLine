@@ -22,9 +22,10 @@ transition:all;
 #time_line
 {
 	width: 1px;
-	height: 1000px;
+	/*height: 1000px;*/
 	background-color: green;
 	margin: auto;
+	position: relative;
 }
 .time
 {
@@ -58,14 +59,36 @@ height: 80px;
 background-color: gainsboro;
 margin: -10px;
 position: relative;
-left: -80px;
+left: -100px;
 top: -40px;
 overflow: hidden;
+}
+.time .pl::before {
+content: '';
+right: 20px;
+top: -15px;
+width: 0px;
+height: 0px;
+border-bottom: 20px solid gainsboro;
+border-right: 20px solid transparent;
+
+position: absolute;
+}
+.time .pr::before {
+content: '';
+right: -32px;
+top: 0px;
+width: 0px;
+height: 0px;
+border-top: 20px solid gainsboro;
+border-left: 20px solid transparent;
+
+position: absolute;
 }
 .tl:hover
 {
 width: 300px;
-left: -300px;
+left: -320px;
 }
 .tr
 {
@@ -74,7 +97,8 @@ height: 80px;
 background-color: gainsboro;
 margin: 20px;
 position: relative;
-top: -40px;
+top: -60px;
+left: 20px;
 overflow: hidden;
 }
 .tr:hover
@@ -90,13 +114,34 @@ overflow: hidden;
 	width: 300px;
 height: 80px;
 position: absolute;
+padding: 10px;
 }
-
+.textdiv
+{
+	margin-left: 10px;
+	float: left;
+}
 img
 {
-	width: 80px;
-	height: 80px;
+	width: 60px;
+	height: 60px;
 	float: left;
 }
 
+i
+{
+	width: 0;
+height: 0;
+border-bottom: 20px solid rgb(0, 0, 0);
+border-right: 20px solid transparent;
+position: absolute;
+right: 10px;
+top: -10px;
+box-sizing: border-box;
+}
+
+h3
+{
+	margin-top: 0px;
+}
 
